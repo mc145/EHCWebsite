@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body{
+     /* background-color: #2e323b;*/ 
+
+     background-color: white; 
+}
+
+.navbar{
+    margin-top: 0; 
+    background-color: #2e323b; 
+    padding: 0; 
+    height: 60px; 
+}
+
+
+ul > li {
+    display: inline-block; 
+}
+
+li{
+    margin-top: 20px;
+}
+
+a{
+    margin-right: 2vw;
+    font-size: 1.1em; 
+    color: white; 
+    text-decoration-style: none; 
+    text-decoration: none; 
+}
+
+a:hover{
+    color: rgb(226, 220, 220); 
+}
+
+#home-navbar{
+    margin-left: 30px; 
+}
