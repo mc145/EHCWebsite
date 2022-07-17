@@ -31,11 +31,12 @@ li{
 }
 
 a{
-    margin-right: 2vw;
+    margin-right: 1.8vw;
     font-size: 1.1em; 
     color: white; 
     text-decoration-style: none; 
     text-decoration: none; 
+    font-family: 'Playfair Display', serif;
 }
 
 a:hover{
@@ -44,4 +45,28 @@ a:hover{
 
 #home-navbar{
     margin-left: 30px; 
+    
+}
+
+#home-link{
+    color: rgb(231, 225, 225); 
+}
+
+
+#logo{
+    position: absolute; 
+    right: 50px; 
+    top: 0px; 
+    width: 5%; 
+}
+
+
+
+#title-navbar{
+    color: white; 
+    font-weight: lighter; 
+    text-align: center; 
+    font-size: 1.5em;
+    margin-top: -27px;
+    font-family: 'Playfair Display', serif; 
 }

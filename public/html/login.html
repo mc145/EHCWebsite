@@ -5,6 +5,8 @@
 <head>
     <title>Login Page</title> 
     <link rel="stylesheet" href="public/css/login.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display&display=swap" rel="stylesheet">
 </head> 
 
 <body> 
@@ -15,9 +17,13 @@
             <li> <a href="#"> About </a> </li>
             <li> <a href="#"> Challenges </a> </li>
             <li> <a href="/register">Register</a> </li> 
-            <li> <a href="/login"> Login  </a> </li>  
+            <li> <a id="login-link" href="/login"> Login  </a> </li>  
         </ul> 
+        <h1 id="title-navbar"> Login to your SAS EHC Account! </h1>
+
+        <img id="logo" src="public/assets/logo.png"> 
     </div> 
+
 
     <div class="form-container"> 
         <form action="/auth/login" method="post" class="login-form"> 
@@ -25,10 +31,14 @@
             <br> <br> 
             <input name="password" id="password" type="password"  placeholder="Password"> 
             <br><br>
-            <input id="submit" type="submit" value="Submit"> 
+            <input id="submit" type="submit" value="Login!"> 
 
 
         </form>
+    </div> 
+
+    <div class="error-container"> 
+        <h3 id="error-message"></h3> 
     </div> 
 
     <script src="public/js/login.js"></script> 

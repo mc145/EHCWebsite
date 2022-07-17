@@ -1,14 +1,20 @@
 
 let registerForm = document.querySelector('form'); 
+let errorDiv = document.getElementsByClassName('error-container')[0]; 
+let errorMessage = document.getElementById('error-message'); 
+
+
 const API_URL = 'http://localhost:5555/auth/register'; 
 
 registerForm.addEventListener('submit', (event) =>{
     event.preventDefault(); 
     const registerData = new FormData(registerForm); 
 
-    const email = registerData.get('email');   
-    const password = registerData.get('password'); 
+    let email = registerData.get('email');   
+    let password = registerData.get('password'); 
 
+    email = email.trim(); 
+    password = password.trim(); 
 
     registerForm.reset(); 
 
@@ -27,7 +33,14 @@ registerForm.addEventListener('submit', (event) =>{
 
     xhr.onload = () => {
         console.log(JSON.parse(xhr.responseText.toString()));
-        window.location.href = JSON.parse(xhr.responseText.toString()); 
+        if(JSON.parse(xhr.responseText.toString()).status !== 1){
+            window.location.href = JSON.parse(xhr.responseText.toString()); 
+
+        } 
+        else{
+            errorMessage.innerHTML = JSON.parse(xhr.responseText.toString()).message; 
+            errorDiv.style.opacity = "100%"; 
+        }
     }; 
 
 }); 
